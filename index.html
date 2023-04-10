@@ -8,8 +8,39 @@
 </head>
 <body>
     <main class="perfil">
-        <li>Imagem de Perfil</li>
-        <li class="imagem_perfil" href="./imagens/Profile-Avatar-PNG-Picture.png"></li>
+       <section id="imagem_de_perfil">
+        <h1>Imagem de Perfil</h1>
+        <p id="imagem">
+            <img src="./imagens/Profile-Avatar-PNG-Picture.png">
+        </p>
+       </section>
+       <section id="nome">
+        <h2>Nome</h2>
+       </section>
+       <section id="idade">
+        <h3>Idade</h3>
+       </section>
+       <section id="localizacao">
+        <h4>Localização</h4>
+       </section>
+       <section id="biografia">
+        <h5>Biografia</h5>
+        <p id="bio">
+            Olá eu sou...
+        </p>
+       </section>
+
+       <section class="formulario">
+        <div class="formulario_container">
+            <h2>Preencha os campos abaixo para atualizar as informações</h2>
+        </div>
+        <form class="principal__formulario" data-formulario>
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="nome">Nome</label>
+                <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+       </section>
     </main>
 </body>
 </html>
