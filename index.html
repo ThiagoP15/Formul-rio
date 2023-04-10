@@ -7,58 +7,46 @@
     <title>Perfil do Usuário</title>
 </head>
 <body>
-    <main class="perfil">
-       <section id="imagem_de_perfil">
+    <main class="perfil" id="perfil" data-perfil>
+       <div id="imagem_de_perfil">
         <h1>Imagem de Perfil</h1>
         <p id="imagemP">
             <img src="./imagens/Profile-Avatar-PNG-Picture.png">
         </p>
-       </section>
-       <section id="nomeP">
-        <h2>Nome</h2>
-       </section>
-       <section id="idadeP">
-        <h3>Idade</h3>
-       </section>
-       <section id="localizacaoP">
-        <h4>Localização</h4>
-       </section>
-       <section id="biografiaP">
+       </div>
+       <div id="nomeP">
+        <h2></h2>
+       </div>
+       <div id="idadeP">
+        <h3></h3>
+       </div>
+       <div id="localizacaoP">
+        <h4></h4>
+       </div>
+       <div id="biografiaP">
         <h5>Biografia</h5>
         <p id="bioP">
-            Olá eu sou...
+           
         </p>
-       </section>
+       </div>
     </main>
        <main>
-       <section class="formulario" data-formulario>
-        <div class="formulario_container">
-            <h2>Preencha os campos abaixo para atualizar as informações</h2>
-        </div>
-        <form class="principal__formulario" data-formulario>
-            <fieldset class="formulario__campo">
-                <label class="campo__etiqueta" for="nome">Nome</label>
-                <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
-                <span class="mensagem-erro"></span>
-            </fieldset>
-            <fieldset class="formulario__campo">
-                <label class="campo__etiqueta" for="idade">Data de nascimento</label>
-                <input name="idade" id="idade" class="campo__escrita campo__escrita--menor" type="text"
-                    required />
-                <span class="mensagem-erro"></span>
-            </fieldset>
-            <fieldset class="formulario__campo">
-                <label class="campo__etiqueta" for="biografia">Biografia</label>
-                <input name="biografia" id="biografia" class="campo__escrita" type="text" minlength="3" required />
-                <span class="mensagem-erro"></span>
-            </fieldset>
-            <fieldset class="formulario__campo">
-                <label class="campo__etiqueta" for="localizacao">Localização</label>
-                <input name="localizacao" id="localizacao" class="campo__escrita" type="text" minlength="3" required />
-                <span class="mensagem-erro"></span>
-            </fieldset>
-        </form>
-       </section>
+       <section id="formulario" data-formulario>
+        <form id="update-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="nome" name="name">
+            <br>
+            <label for="age">Idade:</label>
+            <input type="number" id="idade" name="age">
+            <br>
+            <label for="bio">Biografia:</label>
+            <textarea id="biografia" name="bio"></textarea>
+            <br>
+            <label for="location">Localização:</label>
+            <input type="text" id="localiza" name="location">
+            <br>
+            <button type="submit" id="update-btn">Atualizar</button>
+          </form>
     </main>
     <script src="./js/script.js" type="module"></script>
 </body>
