@@ -10,27 +10,28 @@
     <main class="perfil">
        <section id="imagem_de_perfil">
         <h1>Imagem de Perfil</h1>
-        <p id="imagem">
+        <p id="imagemP">
             <img src="./imagens/Profile-Avatar-PNG-Picture.png">
         </p>
        </section>
-       <section id="nome">
+       <section id="nomeP">
         <h2>Nome</h2>
        </section>
-       <section id="idade">
+       <section id="idadeP">
         <h3>Idade</h3>
        </section>
-       <section id="localizacao">
+       <section id="localizacaoP">
         <h4>Localização</h4>
        </section>
-       <section id="biografia">
+       <section id="biografiaP">
         <h5>Biografia</h5>
-        <p id="bio">
+        <p id="bioP">
             Olá eu sou...
         </p>
        </section>
-
-       <section class="formulario">
+    </main>
+       <main>
+       <section class="formulario" data-formulario>
         <div class="formulario_container">
             <h2>Preencha os campos abaixo para atualizar as informações</h2>
         </div>
@@ -40,7 +41,25 @@
                 <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
                 <span class="mensagem-erro"></span>
             </fieldset>
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="idade">Data de nascimento</label>
+                <input name="idade" id="idade" class="campo__escrita campo__escrita--menor" type="text"
+                    required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="biografia">Biografia</label>
+                <input name="biografia" id="biografia" class="campo__escrita" type="text" minlength="3" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="localizacao">Localização</label>
+                <input name="localizacao" id="localizacao" class="campo__escrita" type="text" minlength="3" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+        </form>
        </section>
     </main>
+    <script src="./js/script.js" type="module"></script>
 </body>
 </html>
