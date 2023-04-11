@@ -1,18 +1,16 @@
-const perfil = document.querySelector("perfil")
-const form = document.getElementById('update-form');
-const updateBtn = document.getElementById('update-btn');
 
-function alteraDados () {
-    var nome = document.getElementById('nome').value
-    var idade = document.getElementById('idade').value
-    var bio = document.getElementById('biografia').value
-    var local = document.getElementById('localiza').value
-}
-function atualiza(perfil) {
-    perfil.innerHTML = `<div id="nomeP">${nome}</div>`
-    perfil.innerHTML = `<div id="idadeP">${idade}</div>`
-    perfil.innerHTML = `<div id="biografiaP">${bio}</div>`
-    perfil.innerHTML = `<div id="localizacaoP">${local}</div>`
-
-    return atualiza;
-}
+const perfil = document.getElementById("perfil");
+const form = document.getElementById("update-form");
+const btn = document.getElementById("update-btn");
+    form.addEventListener("submit", (evento) => {
+        evento.preventDefault()
+        const formulario = {
+         "nome": evento.target.elements['nome'].value,
+         "idade": evento.target.elements['idade'].value,
+         "local": evento.target.elements['localiza'].value,
+         "bio": evento.target.elements['bio'].value,
+        
+        }
+                
+        localStorage.setItem("dados", JSON.stringify(formulario))
+            })
