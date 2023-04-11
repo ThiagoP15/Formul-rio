@@ -30,6 +30,7 @@
        <div id="nomeP" class="nomeP">Nome:</div>
        <div id="idadeP" class="idadeP">Idade:</div>
        <div id="localizacaoP" class="localizaP">Localização:</div>
+       <div id="emailP" class="emailP">E-mail:</div>
     </section>
    <section id="biografiaP" class="biografiaP">Uma biografia é a história da vida de uma pessoa, narrada por meio de um texto.</section>
        <section id="formulario" class="formulario" data-formulario>
@@ -55,6 +56,11 @@
                 <label class="campo__etiqueta" for="local">Localização:</label>
                 <input name="localizaF" id="localiza" class="campo__escrita campo__escrita--menor" type="local"
                     required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="email">E-mail</label>
+                <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
                 <span class="mensagem-erro"></span>
             </fieldset>
             <button type="submit" id="update-btn">Atualizar</button>
