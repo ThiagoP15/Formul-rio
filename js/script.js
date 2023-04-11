@@ -13,4 +13,16 @@ const btn = document.getElementById("update-btn");
         }
                 
         localStorage.setItem("dados", JSON.stringify(formulario))
+
+        const dados = JSON.parse(localStorage.getItem("dados"));
+
+        const nomeElemento = document.getElementById("nomeP");
+        const idadeElemento = document.getElementById("idadeP");
+        const localElemento = document.getElementById("localizacaoP");
+        const bioElemento = document.getElementById("biografiaP");
+        nomeElemento.textContent += " " + dados.nome;
+        idadeElemento.textContent += " " + dados.idade;
+        localElemento.textContent += " " + dados.local;
+        bioElemento.textContent = dados.bio;
+
             })
