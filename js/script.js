@@ -21,10 +21,10 @@ const btn = document.getElementById("update-btn");
         const localElemento = document.getElementById("localizacaoP");
         const bioElemento = document.getElementById("biografiaP");
         const emailElemento = document.getElementById("emailP");
-        nomeElemento.textContent += " " + dados.nome;
-        idadeElemento.textContent += " " + dados.idade;
-        localElemento.textContent += " " + dados.local;
+        nomeElemento.textContent = " " + dados.nome;
+        idadeElemento.textContent = " " + dados.idade;
+        localElemento.textContent = " " + dados.local;
         bioElemento.textContent = dados.bio;
-        emailElemento.textContent += " " + dados.email;
+        emailElemento.textContent = " " + dados.email;
 
             })
