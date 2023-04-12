@@ -8,6 +8,8 @@ const idadeElemento = document.getElementById("idadeP");
 const localElemento = document.getElementById("localizacaoP");
 const bioElemento = document.getElementById("biografiaP");
 const emailElemento = document.getElementById("emailP");
+const telElemento = document.getElementById("telP");
+const imgElemento = document.getElementById("imagemP");
 
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
@@ -17,7 +19,9 @@ form.addEventListener("submit", (evento) => {
     "idade": evento.target.elements['idade'].value,
     "local": evento.target.elements['localiza'].value,
     "bio": evento.target.elements['bio'].value,
-    "email": evento.target.elements['email'].value
+    "email": evento.target.elements['email'].value,
+    "tel": evento.target.elements['tel'].value,
+    "imagem": evento.target.elements['imagem'].files[0]
   };
   
   localStorage.setItem("dados", JSON.stringify(formulario));
@@ -30,6 +34,7 @@ form.addEventListener("submit", (evento) => {
   localElemento.textContent = "Localização: " + dados.local;
   bioElemento.textContent = dados.bio;
   emailElemento.textContent = "Email: " + dados.email;
+  telElemento.textContent = "Telefone: " + dados.tel;
 
   // limpa os campos do formulário
   evento.target.reset();
@@ -44,5 +49,6 @@ if (dados) {
   localElemento.textContent = "Localização: " + dados.local;
   bioElemento.textContent = dados.bio;
   emailElemento.textContent = "Email: " + dados.email;
+  telElemento.textContent = "Telefone: " + dados.tel;
 }
 

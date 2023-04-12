@@ -18,21 +18,26 @@
             href="#perfil"
             class="active">Perfil</a>
             <a data-scroll="biografia" href="#biografiaP" class="active">Biografia</a>
+
+
         <a data-scroll="formulario" href="#formulario">Formulário</a>
     </nav>
     <section class="perfil" id="perfil" data-perfil>
-       <div id="imagem_de_perfil">
-        <h1>Imagem de Perfil</h1>
-        <p id="imagemP">
-            <img src="">
-        </p>
+       <div class="perfil-texto">
+        <div id="imagemP" class="imagemP">
+            <img src="./imagens/Profile-Avatar-PNG-Picture.png">
        </div>
        <div id="nomeP" class="nomeP">Nome:</div>
        <div id="idadeP" class="idadeP">Idade:</div>
        <div id="localizacaoP" class="localizaP">Localização:</div>
        <div id="emailP" class="emailP">E-mail:</div>
+       <div id="telP" class="telP">Telefone:</div>
+       </div>
     </section>
-   <section id="biografiaP" class="biografiaP">Uma biografia é a história da vida de uma pessoa, narrada por meio de um texto.</section>
+   <section id="biografiaP" class="biografiaP">
+    <p>Biografia</p>
+    Uma biografia é a história da vida de uma pessoa, narrada por meio de um texto.
+</section>
        <section id="formulario" class="formulario" data-formulario>
         <form id="update-form">
             <fieldset class="formulario__campo">
@@ -48,7 +53,7 @@
             </fieldset>
             <fieldset class="formulario__campo">
                 <label class="campo__etiqueta" for="biografia">Biografia:</label>
-                <input name="biografiaF" id="bio" class="campo__escrita campo__escrita--menor" type="text"
+                <input name="biografiaF" id="bio" class="campo__escrita campo__escrita--menor" type="text-area"
                     required />
                 <span class="mensagem-erro"></span>
             </fieldset>
@@ -63,7 +68,17 @@
                 <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
                 <span class="mensagem-erro"></span>
             </fieldset>
-            <button type="submit" id="update-btn">Atualizar</button>
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="email">Telefone:</label>
+                <input name="telF" id="tel" class="campo__escrita" type="tel" minlength="4" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999"  required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="img">Imagem de Perfil:</label>
+                <input name="imgF" id="img" class="campo__escrita" type="file" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            <button type="submit" id="update-btn" class="update-btn">Atualizar</button>
           </form>
     <script src="./js/script.js"></script>
     <script src=".js/navbar.js" type="script"></script>
