@@ -20,7 +20,7 @@
             <a data-scroll="biografia" href="#biografiaP" class="active">Biografia</a>
 
 
-        <a data-scroll="formulario" href="#formulario" class="active">Formulário</a>
+        <a data-scroll="formulario" href="#formulario" class="active">Alterar dados</a>
     </nav>
     <section class="perfil" id="perfil" data-perfil>
        <div class="perfil-texto">
@@ -36,9 +36,10 @@
     </section>
    <section id="biografiaP" class="biografiaP">
     <p>Biografia</p>
-    Uma biografia é a história da vida de uma pessoa, narrada por meio de um texto.
+    
 </section>
        <section id="formulario" class="formulario" data-formulario>
+        <p>Atualize seus dados:</p>
         <form id="update-form">
             <fieldset class="formulario__campo">
                 <label class="campo__etiqueta" for="nome">Nome:</label>
@@ -71,11 +72,6 @@
             <fieldset class="formulario__campo">
                 <label class="campo__etiqueta" for="email">Telefone:</label>
                 <input name="telF" id="tel" class="campo__escrita" type="tel" minlength="4" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999"  required />
-                <span class="mensagem-erro"></span>
-            </fieldset>
-            <fieldset class="formulario__campo">
-                <label class="campo__etiqueta" for="img">Imagem de Perfil:</label>
-                <input name="imgF" id="img" class="campo__escrita" type="file" required />
                 <span class="mensagem-erro"></span>
             </fieldset>
             <button type="submit" id="update-btn" class="update-btn">Atualizar</button>
