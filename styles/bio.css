@@ -1,5 +1,5 @@
 .biografiaP {
-    width: 1200px;
+    width: 600px;
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -22,4 +22,7 @@
     -ms-flex-direction: row;
     flex-direction: row;
     
+}
+p {
+    font-weight: bold;
 }

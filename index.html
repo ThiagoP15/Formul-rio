@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,400;1,700&display=swap');
-      </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
     <title>Perfil do Usuário</title>
     <link rel="stylesheet" href="./styles/body.css">
     <link rel="stylesheet" href="./styles/perfil.css">
@@ -26,10 +26,10 @@
         <a data-scroll="formulario" href="#formulario" class="active">Alterar dados</a>
     </nav>
     <section class="perfil" id="perfil" data-perfil>
-        
+        <p class="escrita_dados">Dados Pessoais</p>
        <div class="perfil-texto">
         <div id="imagemP" class="imagemP">
-            <img src="./imagens/Profile-Avatar-PNG-Picture.png">
+            <img src="./imagens/17004.png">
        </div>
        <div id="nomeP" class="nomeP">Nome:</div>
        <div id="idadeP" class="idadeP">Idade:</div>
@@ -37,11 +37,15 @@
        <div id="emailP" class="emailP">E-mail:</div>
        <div id="telP" class="telP">Telefone:</div>
        </div>
+
+
     </section>
    <section id="biografiaP" class="biografiaP">
     <p>Biografia</p>
     
 </section>
+
+
        <section id="formulario" class="formulario" data-formulario>
         <p>Atualize seus dados:</p>
         <form id="update-form">
@@ -75,11 +79,12 @@
             </fieldset>
             <fieldset class="formulario__campo">
                 <label class="campo__etiqueta" for="email">Telefone:</label>
-                <input name="telF" id="tel" class="campo__escrita" type="tel" minlength="4" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999"  required />
+                <input name="telF" id="tel" class="campo__escrita" type="tel" maxlength="15" placeholder="11 99999-9999" mask="(00) 0000-0000"  required />
                 <span class="mensagem-erro"></span>
             </fieldset>
             <button type="submit" id="update-btn" class="update-btn">Atualizar</button>
           </form>
+       </section>
     <script src="./js/script.js"></script>
     <script src=".js/navbar.js" type="script"></script>
 </body>
