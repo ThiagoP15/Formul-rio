@@ -1,7 +1,7 @@
 @import url('./header.css');
 
 :root {
-    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-principal: 'Ubuntu', sans-serif;
     --fonte-logo: 'Inter', sans-serif;
     --azul-claro: #903749;
     --preto: #000000;
